@@ -25,10 +25,10 @@ vga vga (
 	 .b     (VGA_B)
 );
 					
-// A PLL to derive the VGA pixel clocl from the MiSTs 27MHz
+// A PLL to derive the VGA pixel clocl from the WXEDA 48MHz
 pll pll (
 	 .inclk0(CLOCK_48[0]),
-	 .c0(pixel_clock)        // 25.175 MHz
+	 .c0(pixel_clock)        // 31.5 MHz
 );
 
 endmodule
