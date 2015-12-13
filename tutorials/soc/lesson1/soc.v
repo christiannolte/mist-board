@@ -1,8 +1,8 @@
 // A simple system-on-a-chip (SoC) for the MiST
 // (c) 2015 Till Harbaum
-
+// port to WXEDA by Christian Nolte
 module soc (
-   input [1:0] CLOCK_27,
+   input [1:0] CLOCK_48,
    output SDRAM_nCS,
    output VGA_HS,
    output VGA_VS,
@@ -27,7 +27,7 @@ vga vga (
 					
 // A PLL to derive the VGA pixel clocl from the MiSTs 27MHz
 pll pll (
-	 .inclk0(CLOCK_27[0]),
+	 .inclk0(CLOCK_48[0]),
 	 .c0(pixel_clock)        // 25.175 MHz
 );
 
