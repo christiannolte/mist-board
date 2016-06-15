@@ -2,7 +2,7 @@
 // (c) 2015 Till Harbaum
 
 // Einfacher VGA-Controller mit 160x100 Pixeln. Der VGA-Modus ist 640x400, wobei
-// je view Zeilen uns Spalten zusammengefasst werden
+// je vier Zeilen und Spalten zusammengefasst werden
 
 // http://tinyvga.com/vga-timing/640x400@70Hz
 
