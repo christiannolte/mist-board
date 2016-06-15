@@ -2,7 +2,7 @@
 // (c) 2015 Till Harbaum
 
 // Einfacher VGA-Controller mit 160x100 Pixeln. Der zugrunde liegende VGA-Modus 
-// von 640x400 Pixel wird durch Zusammenfassung von je view Zeilen uns Spalten
+// von 640x400 Pixel wird durch Zusammenfassung von je vier Zeilen und Spalten
 // zu 160x100 Pixel "Retro-Auflösung". Das Abdunkeln jeder zweiten Zeile erzeugt
 // Röhren-Fernseher-artige "Scanlines"
 
