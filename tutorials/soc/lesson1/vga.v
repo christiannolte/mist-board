@@ -49,9 +49,9 @@ always@(posedge pclk) begin
 	// the vertical counter is processed at the begin of each hsync
 	if(h_cnt == H+HFP) begin
 		if(v_cnt==VS+VBP+V+VFP-1)  v_cnt <= 0; 
-		else							        v_cnt <= v_cnt + 1;
+		else  v_cnt <= v_cnt + 1;
 
-	        // generate positive vsync signal
+	   // generate positive vsync signal
 		if(v_cnt == V+VFP)    vs <= 1'b1;
 		if(v_cnt == V+VFP+VS) vs <= 1'b0;
 	end
