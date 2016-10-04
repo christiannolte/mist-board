@@ -1,6 +1,6 @@
 // A simple system-on-a-chip (SoC) for the MiST
 // (c) 2015 Till Harbaum
-// port to WXEDA by Christian Nolte
+// Port to TR-Tech WXEDA Board by Christian Nolte
 module soc (
    input [1:0] CLOCK_48,
    output SDRAM_nCS,
