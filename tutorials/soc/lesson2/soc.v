@@ -2,7 +2,7 @@
 // (c) 2015 Till Harbaum
 									  
 module soc (
-   input [1:0] CLOCK_27,
+   input [1:0] CLOCK_48,
    output 		SDRAM_nCS,
    output 		VGA_HS,
    output 	 	VGA_VS,
@@ -64,10 +64,10 @@ always @(negedge pixel_clock) begin
 	end
 end
 	
-// A PLL to derive the VGA pixel clocl from the MiSTs 27MHz
+// A PLL to derive the VGA pixel clocl from the WXEDAs 48MHz
 pll pll (
-	 .inclk0(CLOCK_27[0]),
-	 .c0(pixel_clock)        // 25.175 MHz
+	 .inclk0(CLOCK_48[0]),
+	 .c0(pixel_clock)        // 31.5 MHz
 );
 
 endmodule
