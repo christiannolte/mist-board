@@ -24,16 +24,17 @@ module vga (
    output [5:0] b
 );
 					
-// 640x400 70HZ VESA according to  http://tinyvga.com/vga-timing/640x400@70Hz
+// 640x400 85HZ VESA according to  http://tinyvga.com/vga-timing/640x400@85Hz
 parameter H   = 640;    // width of visible area
-parameter HFP = 16;     // unused time before hsync
-parameter HS  = 96;     // width of hsync
-parameter HBP = 48;     // unused time after hsync
+parameter HFP = 32;     // unused time before hsync
+parameter HS  = 64;     // width of hsync
+parameter HBP = 96;     // unused time after hsync
 
 parameter V   = 400;    // height of visible area
-parameter VFP = 12;     // unused time before vsync
-parameter VS  = 2;      // width of vsync
-parameter VBP = 35;     // unused time after vsync
+parameter VFP = 1;      // unused time before vsync
+parameter VS  = 3;      // width of vsync
+parameter VBP = 41;     // unused time after vsync
+
 
 reg[9:0]  h_cnt;        // horizontal pixel counter
 reg[9:0]  v_cnt;        // vertical pixel counter
