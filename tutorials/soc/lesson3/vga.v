@@ -1,6 +1,6 @@
 // A simple system-on-a-chip (SoC) for the MiST
 // (c) 2015 Till Harbaum
-//ported to wxeda by Christian Nolte
+// Ported to wxeda by Christian Nolte
 
 // VGA controller generating 160x100 pixles. The VGA mode ised is 640x400
 // combining every 4 row and column
