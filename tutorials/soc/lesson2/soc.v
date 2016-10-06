@@ -1,5 +1,6 @@
 // A simple system-on-a-chip (SoC) for the MiST
 // (c) 2015 Till Harbaum
+//ported to wxeda by Christian Nolte
 									  
 module soc (
    input [1:0] CLOCK_48,
