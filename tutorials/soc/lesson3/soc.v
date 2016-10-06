@@ -2,7 +2,7 @@
 // (c) 2015 Till Harbaum
 									  
 module soc (
-   input [1:0] CLOCK_27,
+   input [1:0] CLOCK_48,
    output 		SDRAM_nCS,
    output 		VGA_HS,
    output 	 	VGA_VS,
@@ -86,11 +86,11 @@ ram4k ram4k (
 	.q       ( ram_data_out              )
 );
 	
-// PLL to generate 4Mhz cpu clock and 25Mhz video clock from MiSTs 27Mhz 
+// PLL to generate 4Mhz cpu clock and 31.5Mhz video clock from WXEDAs 48Mhz 
 // on board clock
 pll pll (
-	 .inclk0 ( CLOCK_27[0]   ),
-	 .c0     ( pixel_clock   ),        // 25.175 MHz
+	 .inclk0 ( CLOCK_48[0]   ),
+	 .c0     ( pixel_clock   ),        // 31.5 MHz
 	 .c1     ( cpu_clock     )         // 4 MHz
 );
 
