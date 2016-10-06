@@ -1,5 +1,6 @@
 // Ein einfaches Pong-Spiel fuer das MiST-FPGA-Board
 // (c) 2015 Till Harbaum
+// ported to wxeda by Christian Nolte
 
 // Lektion 1: VGA-Signal mit Ball
 
