@@ -2,7 +2,7 @@
 // (c) 2015 Till Harbaum
 									  
 module soc (
-   input [1:0] 	CLOCK_27,
+   input [1:0] 	CLOCK_48,
 	
 	// SDRAM interface
 	inout [15:0]  	SDRAM_DQ, 		// SDRAM Data bus 16 Bits
@@ -128,13 +128,13 @@ reg [2:0] clk_div;
 always @(posedge ram_clock)
 	clk_div <= clk_div + 3'd1;
 	
-// PLL to generate 32Mhz ram clock and 25Mhz video clock from MiSTs
-// 27Mhz on board clock
+// PLL to generate 32Mhz ram clock and 25.175Mhz video clock from WXEDAs
+// 48Mhz on board clock
 wire pll_locked;
 pll pll (
-	 .inclk0 ( CLOCK_27[0]   ),
+	 .inclk0 ( CLOCK_48[0]   ),
 	 .locked ( pll_locked    ),        // PLL is running stable
-	 .c0     ( pixel_clock   ),        // 25.175 MHz
+	 .c0     ( pixel_clock   ),        // 25.191489 instead of 25.175 MHz //hope it will work
 	 .c1     ( ram_clock     ),        // 32 MHz
 	 .c2     ( SDRAM_CLK     )         // slightly phase shifted 32 MHz
 );
