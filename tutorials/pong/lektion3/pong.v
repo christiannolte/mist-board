@@ -4,7 +4,7 @@
 // Lektion 3: Joystick
 
 module pong (
-   input [1:0] CLOCK_27,
+   input [1:0] CLOCK_48,
    output 		SDRAM_nCS,
 
    // SPI-Schnittstelle zum IO-Prozessor
@@ -38,16 +38,16 @@ user_io user_io (
 
 
 				
-// 640x480 60HZ VESA laut http://tinyvga.com/vga-timing/640x480@60Hz
+// VGA Signal 640 x 480 @ 73 Hz laut http://tinyvga.com/vga-timing/640x480@73Hz
 parameter H   = 640;    // Breite des sichtbaren Bereiches
-parameter HFP = 16;     // Nicht nutzbarer Bereich vor H-Sync
-parameter HS  = 96;     // Breite des H-Sync
-parameter HBP = 48;     // Nicht nutzbarer Bereich nach H-Sync
+parameter HFP = 24;     // Nicht nutzbarer Bereich vor H-Sync
+parameter HS  = 40;     // Breite des H-Sync
+parameter HBP = 128;     // Nicht nutzbarer Bereich nach H-Sync
 
 parameter V   = 480;    // Höhe des sichtbaren Bereiches
-parameter VFP = 10;     // Nicht nutzbarer Bereich vor V-Sync
+parameter VFP = 9;     // Nicht nutzbarer Bereich vor V-Sync
 parameter VS  = 2;      // Höhe des V-Sync
-parameter VBP = 33;     // Nicht nutzbarer Bereich nach V-Sync
+parameter VBP = 29;     // Nicht nutzbarer Bereich nach V-Sync
 
 reg[9:0]  h_cnt;        // horizontaler Pixelzaehler
 reg[9:0]  v_cnt;        // vertikaler Pixelzaehler
@@ -197,9 +197,9 @@ assign VGA_R = pixel?6'b111111:6'b000000;
 assign VGA_G = pixel?6'b111111:6'b000000;
 assign VGA_B = pixel?6'b111111:6'b000000;
 
-// PLL, um aus den 27MHz den VGA-Pixeltakt zu erzeugen
+// PLL, um aus den 48MHz den VGA-Pixeltakt zu erzeugen
 pll pll (
-	 .inclk0(CLOCK_27[0]),
+	 .inclk0(CLOCK_48[0]),
 	 .c0(pixel_clock)
  );
 
