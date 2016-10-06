@@ -1,10 +1,11 @@
 // Ein einfaches Pong-Spiel fuer das MiST-FPGA-Board
 // (c) 2015 Till Harbaum
+// ported to WXEDA by Christian Nolte
 
 // Lektion 2: Beweglicher Ball
 
 module pong (
-   input [1:0] CLOCK_27,
+   input [1:0] CLOCK_48,
    output 		SDRAM_nCS,
    output reg	VGA_HS,
    output reg 	VGA_VS,
@@ -102,9 +103,9 @@ assign VGA_R = pixel?6'b111111:6'b000000;
 assign VGA_G = pixel?6'b111111:6'b000000;
 assign VGA_B = pixel?6'b111111:6'b000000;
 
-// PLL, um aus den 27MHz den VGA-Pixeltakt zu erzeugen
+// PLL, um aus den 48MHz den VGA-Pixeltakt zu erzeugen
 pll pll (
-	 .inclk0(CLOCK_27[0]),
+	 .inclk0(CLOCK_48[0]),
 	 .c0(pixel_clock)
  );
 
