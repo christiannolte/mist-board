@@ -26,14 +26,14 @@ module vga (
 					
 // 640x400 85HZ VESA according to  http://tinyvga.com/vga-timing/640x400@85Hz
 parameter H   = 640;    // width of visible area
-parameter HFP = 32;     // unused time before hsync
-parameter HS  = 64;     // width of hsync
-parameter HBP = 96;     // unused time after hsync
+parameter HFP = 24;     // unused time before hsync
+parameter HS  = 40;     // width of hsync
+parameter HBP = 128;     // unused time after hsync
 
-parameter V   = 400;    // height of visible area
-parameter VFP = 1;      // unused time before vsync
-parameter VS  = 3;      // width of vsync
-parameter VBP = 41;     // unused time after vsync
+parameter V   = 480;    // height of visible area
+parameter VFP = 9;      // unused time before vsync
+parameter VS  = 2;      // width of vsync
+parameter VBP = 29;     // unused time after vsync
 
 
 reg[9:0]  h_cnt;        // horizontal pixel counter
@@ -59,8 +59,8 @@ always@(posedge pclk) begin
 		else								v_cnt <= v_cnt + 10'd1;
 
                // generate positive vsync signal
- 		if(v_cnt == V+VFP)    vs <= 1'b1;
-		if(v_cnt == V+VFP+VS) vs <= 1'b0;
+ 		if(v_cnt == V+VFP)    vs <= 1'b0;
+		if(v_cnt == V+VFP+VS) vs <= 1'b1;
 	end
 end
 
