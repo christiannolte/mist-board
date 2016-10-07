@@ -31,6 +31,7 @@ parameter HS  = 40;     // width of hsync
 parameter HBP = 128;     // unused time after hsync
 
 parameter V   = 480;    // height of visible area
+parameter Vsmall = 400;
 parameter VFP = 9;      // unused time before vsync
 parameter VS  = 2;      // width of vsync
 parameter VBP = 29;     // unused time after vsync
@@ -85,7 +86,7 @@ always@(posedge pclk) begin
         // VGA lines.
 
         // visible area?
-	if((v_cnt < V) && (h_cnt < H)) begin
+	if((v_cnt < Vsmall) && (h_cnt < H)) begin
 		// increase video counter after each pixel
 		if(h_cnt[1:0] == 2'd3)
 			video_counter <= video_counter + 14'd1;
