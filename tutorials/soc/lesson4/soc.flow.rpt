@@ -1,5 +1,5 @@
 Flow report for soc
-Thu Oct 06 17:18:59 2016
+Fri Oct 07 16:23:30 2016
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 06 17:18:52 2016      ;
+; Flow Status                        ; Successful - Fri Oct 07 16:23:23 2016      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; soc                                        ;
 ; Top-level Entity Name              ; soc                                        ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE10E22C8                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,258 / 10,320 ( 22 % )                    ;
-;     Total combinational functions  ; 2,224 / 10,320 ( 22 % )                    ;
+; Total logic elements               ; 2,254 / 10,320 ( 22 % )                    ;
+;     Total combinational functions  ; 2,217 / 10,320 ( 21 % )                    ;
 ;     Dedicated logic registers      ; 411 / 10,320 ( 4 % )                       ;
 ; Total registers                    ; 411                                        ;
 ; Total pins                         ; 61 / 92 ( 66 % )                           ;
@@ -64,42 +64,37 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/06/2016 17:18:14 ;
+; Start date & time ; 10/07/2016 16:22:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; soc                 ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                       ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180655748385513.147576709412480       ; --            ; --          ; --         ;
-; ENABLE_SIGNALTAP                    ; Off                                   ; --            ; --          ; --         ;
-; FITTER_EFFORT                       ; Fast Fit                              ; Auto Fit      ; --          ; --         ;
-; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
-; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --          ; --         ;
-; IP_TOOL_NAME                        ; ALTPLL                                ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --          ; --         ;
-; IP_TOOL_VERSION                     ; 13.1                                  ; --            ; --          ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
-; MISC_FILE                           ; pll.ppf                               ; --            ; --          ; --         ;
-; MISC_FILE                           ; vgapll_bb.v                           ; --            ; --          ; --         ;
-; MISC_FILE                           ; vgapll.ppf                            ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --         ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
-; USE_SIGNALTAP_FILE                  ; soc.stp                               ; --            ; --          ; --         ;
-+-------------------------------------+---------------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                 ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 180655748385513.147585014906668 ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ROM: 1-PORT                     ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                            ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                            ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                            ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; pll.ppf                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; vgapll_bb.v                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; vgapll.ppf                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing               ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing               ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
++-------------------------------------+---------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -107,11 +102,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 547 MB              ; 00:00:16                           ;
-; Fitter                    ; 00:00:16     ; 1.1                     ; 945 MB              ; 00:00:17                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 547 MB              ; 00:00:17                           ;
+; Fitter                    ; 00:00:29     ; 1.5                     ; 953 MB              ; 00:00:32                           ;
 ; Assembler                 ; 00:00:02     ; 1.0                     ; 450 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 528 MB              ; 00:00:05                           ;
-; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:40                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.2                     ; 541 MB              ; 00:00:05                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:00:56                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
