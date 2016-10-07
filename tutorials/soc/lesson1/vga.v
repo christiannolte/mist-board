@@ -1,10 +1,10 @@
 // A simple system-on-a-chip (SoC) for the MiST
 // (c) 2015 Till Harbaum
 
-// VGA controller generating 160x100 pixles. The VGA mode ised is 640x400
+// VGA controller generating 160x100 pixles. The VGA mode ised is 640x480
 // combining every 4 row and column
 
-// http://tinyvga.com/vga-timing/640x400@85Hz
+// http://tinyvga.com/vga-timing/640x480@73Hz
 
 module vga (
    // pixel clock
@@ -18,7 +18,7 @@ module vga (
    output [5:0] b
 );
 					
-// 640x400 70HZ VESA according to  http://tinyvga.com/vga-timing/640x400@70Hz
+// VGA Signal 640 x 480 @ 73 Hz timing according to  http://tinyvga.com/vga-timing/640x480@73Hz
 parameter H   = 640;    // width of visible area
 parameter HFP = 24;     // unused time before hsync
 parameter HS  = 40;     // width of hsync
@@ -51,7 +51,7 @@ always@(posedge pclk) begin
 		if(v_cnt==VS+VBP+V+VFP-1)  v_cnt <= 0; 
 		else                       v_cnt <= v_cnt + 1;
 
-	   // generate positive vsync signal
+	   // generate negative vsync signal
 		if(v_cnt == V+VFP)    vs <= 1'b0;
 		if(v_cnt == V+VFP+VS) vs <= 1'b1;
 	end
