@@ -31,5 +31,4 @@ pll pll (
 	 .inclk0(CLOCK_48[0]),
 	 .c0(pixel_clock)        // 31.5 MHz
 );
-
 endmodule
